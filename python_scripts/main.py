@@ -10,6 +10,7 @@ out4 = "Concentrate and ask again"
 out5 = "Reply hazy, try again"
 out6 = "My reply is no"
 out7 = "My sources say no"
+
 responses = [out0,out1,out2,out3,out4,out5,out6,out7]
 i = 1
 def magic_8_ball(i):
