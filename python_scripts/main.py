@@ -24,3 +24,5 @@ def magic_8_ball(i):
             i = i - 1
             break
 magic_8_ball(1)
+  
+  
