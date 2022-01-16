@@ -1,6 +1,6 @@
-from curses import KEY_ENTER
-from turtle import onkeypress
+from calendar import c
 import random
+import os
 
 out0 = "It is certain"
 out1 = "Outlook good"
@@ -15,14 +15,15 @@ responses = [out0,out1,out2,out3,out4,out5,out6,out7]
 i = 1
 def magic_8_ball(i):
     while True:
-        user_input = input("What would you like to know? (Push enter to exit) \n")
-        if user_input:
+        user_input = input("What would you like to know? (Type 'C' to clear the screen, type 'Q' to quit) \n").lower()
+        if user_input and not user_input == 'q' and not user_input == 'c':
             answer = random.choice(responses)
             print(f' \n{answer}\n')
+        elif user_input == 'q':
+            quit()
+        elif user_input == 'c':
+            os.system('cls')
+            i = i
         else:
-            print("bye!") 
-            i = i - 1
-            break
-magic_8_ball(1)
-  
-  
+            print('Please try again. \n')
+magic_8_ball(i)
